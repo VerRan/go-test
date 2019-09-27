@@ -1,0 +1,23 @@
+[
+    {  
+       "streamName":"yeahmobi-test",
+       "region":"regionName",
+       "scaleOnOperation": ["PUT","GET"],
+       "minShards":1,
+       "maxShards":16,
+       "refreshShardsNumberAfterMin":5,
+       "scaleUp": {
+            "scaleThresholdPct": 75,
+            "scaleAfterMins": 1,
+            "scalePct": 100,
+            "notificationARN": "arn:aws:sns:us-east-1:517141035927:NotifyMe"
+        },
+        "scaleDown": {
+            "scaleThresholdPct": 25,
+            "scaleAfterMins": 1,
+            "scalePct": 50,
+            "coolOffMins": 1,
+            "notificationARN": "arn:aws:sns:us-east-1:517141035927:NotifyMe"
+        }
+    }
+]
